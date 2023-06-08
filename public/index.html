@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test Site</title>
+  </head>
+  <body id="container">
+    <div>
+      <h1>Welcome to the Test-Site</h1>
+    </div>
+    <div id="upload">
+      <p>Upload Files</p>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">File</label>
+        <input id="file" name="file" type="file" />
+        <br /><br />
+        <button id="upload-btn" type="submit">Upload</button>
+      </form>
+    </div>
+    <div id="bot">
+      <img id="bot-icon" src="images/chatbot.png" alt="" />
+      <div id="dialogbox" class="hidden">
+        <div id="dialogbox-header">
+          Test Assistant
+          <button id="close-btn">X</button>
+        </div>
+        <div id="dialogbox-messages">
+          <div id="dialogbox-message-1">Hello! How can I assist you today?</div>
+        </div>
+        <div id="dialogbox-footer">
+          <input name="q" type="text" id="chat-input" placeholder="Type your message..." />
+          <button type="submit" id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
